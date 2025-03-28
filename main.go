@@ -2,8 +2,9 @@ package main
 
 import "fmt"
 
-func main(){
-	var x int = 17
-	x += 7
-	fmt.Print("o valor de x é:", x)
+func main() {
+	a, b := 10, 3
+	fmt.Println("a soma é", a+b)
+	fmt.Println("a subtração é", a-b)
+	fmt.Println("a multiplicação", a*b)
 }
