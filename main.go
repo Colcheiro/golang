@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import ( 
+	"fmt"
+	"strings"
+	"sort"
+)
 
 func main() {
 	
@@ -10,5 +14,5 @@ func main() {
 	fmt.Println("digite o numero2", numero)
 	fmt.Scanf(&numero)
 	
-
+}
 	
