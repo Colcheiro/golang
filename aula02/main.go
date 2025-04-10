@@ -1,34 +1,18 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	age := 45
-	fmt.Println(age <=50)
-	fmt.Println(age >=50)
-	fmt.Println(age ==50)
-	fmt.Println(age !=50)
+	var idade int
 
-	if age < 30 {
-		fmt.Println("Menor que 30 anos")
-	} else {
-		fmt.Println("Menor que 40 anos")
-	} else {
-		fmt.Println("Não é menor que 40 anos")
-	}
-	names := []string{"malu","aidan","francesco"}
+	fmt.Print("Quantos aninhos você tem, diva? 😘 ")
+	fmt.Scan(&idade)
 
-	for index, value := range names {
-		if index == 1 {
-			fmt.Println("continue após a posição",index,"e valor", value)
-			continue
-		}
-		if index > 2 {
-			fmt.Println("sair após", index)
-			break
-		}
-		fmt.Println("Valor",value)
+	if idade < 18 {
+		fmt.Println("Você é menor de idade 🎀")
+	} else if idade <= 60 {
+		fmt.Println("Você é adulto 💼")
+	} else {
+		fmt.Println("Você é idoso 👵🏼")
 	}
 }
