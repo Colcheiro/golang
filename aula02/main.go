@@ -4,15 +4,32 @@ import (
 	"fmt"
 )
 
-func sayGreeting(nome string) {
-	fmt.Println("Olá", nome)
+func sayMyName(name string) {
+	fmt.Println("Olá", name)
 }
-func addnumber(numero1 int, numero2 int) int {
-	return numero1 + numero2
-}
-func main() {
-	sayGreeting("juvelino")
-	resultado := addnumber(180, 360)
-	fmt.Println(resultado)
 
+func getSaldo() int {
+	var saldo int
+	fmt.Println("Digite seu saldo:")
+	fmt.Scan(&saldo)
+	return saldo
+}
+
+func getSaque() int {
+	var saque int
+	fmt.Println("Digite quanto você deseja sacar:")
+	fmt.Scan(&saque)
+	return saque
+}
+
+func atualizaSaldo(saldo int, saque int) int {
+	return saldo - saque
+}
+
+func main() {
+	sayMyName("Juvelino")
+	saldo := getSaldo()
+	saque := getSaque()
+	resultado := atualizaSaldo(saldo, saque)
+	fmt.Println("Saldo restante:", resultado)
 }
