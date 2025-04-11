@@ -1,18 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
+func sayGreeting(nome string) {
+	fmt.Println("Olá", nome)
+}
+func addnumber(numero1 int, numero2 int) int {
+	return numero1 + numero2
+}
 func main() {
-	var idade int
+	sayGreeting("juvelino")
+	resultado := addnumber(180, 360)
+	fmt.Println(resultado)
 
-	fmt.Print("Quantos aninhos você tem, diva? 😘 ")
-	fmt.Scan(&idade)
-
-	if idade < 18 {
-		fmt.Println("Você é menor de idade 🎀")
-	} else if idade <= 60 {
-		fmt.Println("Você é adulto 💼")
-	} else {
-		fmt.Println("Você é idoso 👵🏼")
-	}
 }
