@@ -4,18 +4,17 @@ import (
 	"fmt"
 )
 
-func dividir(dividendo int, divisor int) (int, string) {
-	if divisor == 0 {
-		return 0, "erro na divisão por zero"
+func dadosPessoa(nome string, idade int) (int, string) {
+	var status string
+	if idade >= 18 {
+		status = "maior de idade"
+	} else {
+		status = "menor de idade"
 	}
-	return dividendo / divisor, "sem erro"
+	return idade, status
 }
 
 func main() {
-	resultado, erro := dividir(10, 0)
-	if erro != "sem erro" {
-		fmt.Println(erro)
-	} else {
-		fmt.Println("O resultado da divisão é", resultado, erro)
-	}
+	idade, status := dadosPessoa("Clara", 16)
+	fmt.Printf("Idade: %d, Status: %s\n", idade, status)
 }
