@@ -4,32 +4,18 @@ import (
 	"fmt"
 )
 
-func sayMyName(name string) {
-	fmt.Println("Olá", name)
-}
-
-func getSaldo() int {
-	var saldo int
-	fmt.Println("Digite seu saldo:")
-	fmt.Scan(&saldo)
-	return saldo
-}
-
-func getSaque() int {
-	var saque int
-	fmt.Println("Digite quanto você deseja sacar:")
-	fmt.Scan(&saque)
-	return saque
-}
-
-func atualizaSaldo(saldo int, saque int) int {
-	return saldo - saque
+func dividir(dividendo int, divisor int) (int, string) {
+	if divisor == 0 {
+		return 0, "erro na divisão por zero"
+	}
+	return dividendo / divisor, "sem erro"
 }
 
 func main() {
-	sayMyName("Juvelino")
-	saldo := getSaldo()
-	saque := getSaque()
-	resultado := atualizaSaldo(saldo, saque)
-	fmt.Println("Saldo restante:", resultado)
+	resultado, erro := dividir(10, 0)
+	if erro != "sem erro" {
+		fmt.Println(erro)
+	} else {
+		fmt.Println("O resultado da divisão é", resultado, erro)
+	}
 }
