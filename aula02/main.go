@@ -3,16 +3,18 @@ package main
 import (
 	"fmt"
 )
-func analisarNotas (nota1, nota2 float64) (float64, string) {
-	soma := nota1 + nota2
-	media := soma / 2
-	if media >= 6{
-	return media, "aprovado"
+
+func main() {
+	estoque := make(map[string]int)
+
+	estoque["Coxinha"] = 10
+	estoque["Pao de queijo"] = 15
+	estoque["Refrigerante"] = 20
+
+	estoque["Coxinha"] -= 2
+	estoque["Pao de queijo"] -= 1
+
+	for item, total := range estoque {
+		fmt.Printf("%s sobrou %d unidades\n", item, total)
 	}
-return media, "reprovado"
 }
-	func main() {
-	media, resultado:= analisarNotas (7.5, 5.5)
-	fmt.Println("Média:", media)
-	fmt.Println("Resultado:", resultado)
-	}
